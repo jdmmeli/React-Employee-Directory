@@ -2,10 +2,11 @@ import API from "../utils/API";
 import React, { Component } from "react"
 import Search from "./Search"
 import Table from "./Table"
-import "./style.css";
+
 
 class Container extends Component {
 
+    
     state = {
         search: "",
         employees: [],
@@ -14,6 +15,7 @@ class Container extends Component {
 
     };
 
+   
     componentDidMount() {
         API.getUsers().then(res => this.setState({
             employees: res.data.results,
@@ -21,6 +23,7 @@ class Container extends Component {
         })).catch(err => console.log(err))
     }
 
+    
 
     sortByName = () => {
         const filtereds = this.state.filteredEmployees;
@@ -44,13 +47,14 @@ class Container extends Component {
 
         }
     }
+    
     handleInputChange = event => {
+
         const employees = this.state.employees;
         const UserInput = event.target.value;
         const filteredEmployees = employees.filter(employee => employee.name.first.toLowerCase().indexOf(UserInput.toLowerCase()) > -1
         )
         this.setState({
-
             filteredEmployees,
 
         });
@@ -59,6 +63,7 @@ class Container extends Component {
     };
 
 
+   
     employeeSearch = () => {
         API.getUsers()
             .then(res => this.setState({
@@ -68,6 +73,7 @@ class Container extends Component {
             .catch(err => console.log(err))
     }
 
+   
     handleSearch = event => {
         event.preventDefault();
         if (!this.state.search) {

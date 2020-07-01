@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.css";
+
 
 function Search(props) {
 
@@ -7,21 +7,19 @@ function Search(props) {
         <div className="container-fluid">
 
 
-            <header className="z-depth-3 col s12" >
+            <header className="col-md-6" >
                 <div className="row">
-                    {/* <header className=" > */}
 
                     <div className="col s6">
 
 
 
-                        <h3 className="right-align headerText">Associate Directory</h3>
-                        {/* <h6 className="center-align smallerHeaderText">Use the box down below to narrow your search</h6> */}
+                        <h3 className="col-md-6 text-left">Associate Directory</h3>
 
                     </div>
-                    <div className="col s6 ">
+                    <div className="col-md-6 ">
 
-                        <div className="col s6 inputAndButton right-align ">
+                        <div className="col-md-6 text-right ">
 
                             <input
                                 onChange={props.handleInputChange}
@@ -41,7 +39,7 @@ function Search(props) {
                             <button
                                 type="submit"
                                 value=""
-                                className=" btn z-depth-2 waves-effect  searchBttn"
+                                className="btn btn-primary"
                                 onClick={props.handleSearch} >Search</button>
                         </div>
 
@@ -51,7 +49,6 @@ function Search(props) {
 
 
                     </div>
-                    {/* </header > */}
                 </div>
             </header>
         </div >
