@@ -10,11 +10,11 @@ function Search(props) {
             <header className="col-md-6" >
                 <div className="row">
 
-                    <div className="col s6">
+                    <div className="col-md-6">
 
 
 
-                        <h3 className="col-md-6 text-left">Associate Directory</h3>
+                        <h3 className="col-md-6 text-left">Employee Directory</h3>
 
                     </div>
                     <div className="col-md-6 ">
@@ -33,7 +33,7 @@ function Search(props) {
 
 
                         </div>
-                        <div className="col m4">
+                        <div className="col-md-4">
 
 
                             <button
